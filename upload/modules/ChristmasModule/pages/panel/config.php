@@ -12,11 +12,6 @@ define('PANEL_PAGE', 'christmasmodule_configuration');
 $page_title = $cmLanguage->get('general', 'title');
 require_once(ROOT_PATH . '/core/templates/backend_init.php');
 require_once(__DIR__ . '/../../include/check-config.php');
-
-
-/**
- * Proceiendo de cambios
- */
 $errors = array();
 
 
@@ -58,7 +53,7 @@ if (Input::exists() && isset($_FILES['config'])) {
 
 
 // Load modules + template
-Module::loadPage($user, $pages, $cache, $smarty, array($navigation, $cc_nav, $mod_nav), $widgets);
+Module::loadPage($user, $pages, $cache, $smarty, [$navigation, $cc_nav, $staffcp_nav], $widgets, $template);
 
 $smarty->assign(array(
     'ERRORS' => $errors,

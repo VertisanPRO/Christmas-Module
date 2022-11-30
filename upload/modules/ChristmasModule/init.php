@@ -1,15 +1,8 @@
 <?php
 /**
- * CHRISTMAS MODULE | By zJerino
- * Version: 1.0.0
+ * CHRISTMAS MODULE | By zJerino & VertisanPRO
+ * Version: 1.0.1
  */
 
-/**
- * Init custom language
- */
 $cmLanguage = new Language(__DIR__ . '/language', LANGUAGE);
-
-/**
- * Load module
- */
 require_once "module.php";

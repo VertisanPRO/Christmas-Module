@@ -6,7 +6,7 @@ use Config;
 
 class ChristmasModule extends \Module {
     function __construct(\Pages $pages) {
-        parent::__construct($this, 'ChristmasModule', '<a href="https://namelessmc.com/profile/zJerino/">zJerino</a>', '1.0.0', NAMELESS_VERSION);
+        parent::__construct($this, 'ChristmasModule', '<a href="https://namelessmc.com/profile/zJerino/">zJerino</a> & <a href="https://github.com/VertisanPRO">VertisanPRO</a>', '1.0.1', NAMELESS_VERSION);
 
         $pages->add('ChristmasModule', '/panel/ChristmasModule/config', 'pages/panel/config.php');
     }
@@ -55,6 +55,10 @@ class ChristmasModule extends \Module {
             $navs[2]->add('christmasmodule_divider', mb_strtoupper($cmLanguage->get('general', 'title')), 'divider', 'top', null, 9999, '');
             $navs[2]->add('christmasmodule_configuration', $cmLanguage->get('general', 'title'), \URL::build('/panel/ChristmasModule/config'), 'top', null, 10000, "");
         }
+    }
+
+    function getDebugInfo(): array {
+        return [];
     }
 }
 
