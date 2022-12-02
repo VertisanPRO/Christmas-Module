@@ -6,7 +6,7 @@ use Config;
 
 class ChristmasModule extends \Module {
     function __construct(\Pages $pages) {
-        parent::__construct($this, 'ChristmasModule', '<a href="https://namelessmc.com/profile/zJerino/">zJerino</a> & <a href="https://github.com/VertisanPRO">VertisanPRO</a>', '1.0.1', NAMELESS_VERSION);
+        parent::__construct($this, 'ChristmasModule', '<a href="https://namelessmc.com/profile/zJerino/">zJerino</a> & <a href="https://github.com/VertisanPRO">VertisanPRO</a>', '1.0.2', NAMELESS_VERSION);
 
         $pages->add('ChristmasModule', '/panel/ChristmasModule/config', 'pages/panel/config.php');
     }
@@ -46,7 +46,7 @@ class ChristmasModule extends \Module {
                 
                 let divqqq = document.createElement(\'div\'); divqqq.id = \''.$classname.'\'; document.body.appendChild(divqqq);
                   
-                let particles = new particlesJS(\''.$classname.'\', '.file_get_contents(__DIR__ . '/public/particles.json').');
+                new particlesJS(\''.$classname.'\', '.file_get_contents(__DIR__ . '/public/particles.json').');
             ');
         }
         $cmLanguage = new \Language(__DIR__ . '/language', LANGUAGE);
